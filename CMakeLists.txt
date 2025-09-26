@@ -9,14 +9,6 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-if(WIN32 AND NOT DEFINED Qt6_DIR)
-    if(DEFINED ENV{QT6_DIR})
-        set(Qt6_DIR $ENV{QT6_DIR})
-    else()
-        message(FATAL_ERROR "Qt6_DIR not set. Please set environment variable QT6_DIR to your Qt6 installation folder (e.g., C:/Qt/6.x.x/msvc2019_64/lib/cmake/Qt6).")
-    endif()
-endif()
-
 find_package(Qt6 REQUIRED COMPONENTS Widgets)
 
 set(PROJECT_SOURCES
